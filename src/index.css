@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #FFF9ED;
+  color: #172B46;
+  overflow-x: hidden;
+}
+
+.font-fredoka { font-family: 'Fredoka', cursive, sans-serif; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-4deg); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+@keyframes waveBar {
+  0%, 100% { height: 15%; }
+  50% { height: 95%; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-float { animation: floatSlow 5s ease-in-out infinite; }
+.animate-float-reverse { animation: floatReverse 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+.animate-fadeIn { animation: fadeIn 0.25s ease-out forwards; }
+.wave-bar { animation: waveBar 1.2s ease-in-out infinite; }
+
+/* Pattern overlay background */
+.bg-grid-pattern {
+  background-image: radial-gradient(#172B4615 1px, transparent 1px);
+  background-size: 24px 24px;
+}
